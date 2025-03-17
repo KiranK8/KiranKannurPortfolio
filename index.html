@@ -1,0 +1,771 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Kiran Kannur Portfolio</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+
+    <link rel="stylesheet" href="css/open-iconic-bootstrap.min.css">
+    <link rel="stylesheet" href="css/animate.css">
+    
+    <link rel="stylesheet" href="css/owl.carousel.min.css">
+    <link rel="stylesheet" href="css/owl.theme.default.min.css">
+    <link rel="stylesheet" href="css/magnific-popup.css">
+
+    <link rel="stylesheet" href="css/aos.css">
+
+    <link rel="stylesheet" href="css/ionicons.min.css">
+    
+    <link rel="stylesheet" href="css/flaticon.css">
+    <link rel="stylesheet" href="css/icomoon.css">
+    <link rel="stylesheet" href="css/style.css">
+
+
+
+<style>
+
+/*======================================
+//--//-->   ABOUT
+======================================*/
+
+.about-mf .box-shadow-full {
+  padding-top: 4rem;
+  padding-bottom: 4rem;
+}
+
+.about-mf .about-img {
+  margin-bottom: 2rem;
+}
+
+.about-mf .about-img img {
+  margin-left: 10px;
+}
+
+
+.skill-mf .progress {
+  /* background-color: #cde1f8; */
+  margin: .5rem 0 1.2rem 0;
+  border-radius: 0;
+  height: .7rem;
+}
+
+.skill-mf .progress .progress-bar {
+  height: .7rem;
+  background-color: #ffbd39;
+}
+
+
+/* Animation styles */
+#typing-animation {
+  position: relative;
+  font-size: 30px;
+  font-weight: bold;
+  color: rgb(255, 255, 255);
+  overflow: hidden;
+  white-space: nowrap;
+  animation: typing 3s steps(20, end) infinite;
+}
+
+#typing-animation:before {
+  content: "";
+  /* position: absolute; */
+  top: 0;
+  left: 0;
+  width: 0;
+  height: 100%;
+  background-color: #ccc;
+  animation: typing-cursor 0.5s ease-in-out infinite;
+}
+
+@keyframes typing {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+
+@keyframes typing-cursor {
+  from {
+    width: 5px;
+  }
+  to {
+    width: 0;
+  }
+}
+
+
+/* project image zoom effect */
+
+.zoom-effect {
+  overflow: hidden;
+  transition: transform 0.3s ease-out;
+}
+
+.zoom-effect:hover {
+  transform: scale(1.1);
+}
+
+
+</style>
+
+
+  </head>
+  <body data-spy="scroll" data-target=".site-navbar-target" data-offset="300">
+	  
+	  
+    <nav class="navbar navbar-expand-lg navbar-dark ftco_navbar ftco-navbar-light site-navbar-target" id="ftco-navbar">
+	    <div class="container">
+	      <a class="navbar-brand" href="index.html">Kiran Kannur</a>
+	      <button class="navbar-toggler js-fh5co-nav-toggle fh5co-nav-toggle" type="button" data-toggle="collapse" data-target="#ftco-nav" aria-controls="ftco-nav" aria-expanded="false" aria-label="Toggle navigation">
+	        <span class="oi oi-menu"></span> Menu
+	      </button>
+
+	      <div class="collapse navbar-collapse" id="ftco-nav">
+	        <ul class="navbar-nav nav ml-auto">
+	          <li class="nav-item"><a href="#home-section" class="nav-link"><span>Home</span></a></li>
+	          <li class="nav-item"><a href="#about-section" class="nav-link"><span>About</span></a></li>
+	          <li class="nav-item"><a href="#resume-section" class="nav-link"><span>Resume</span></a></li>
+	          <li class="nav-item"><a href="#project-section" class="nav-link"><span>Projects</span></a></li>
+	          <li class="nav-item"><a href="#contact-section" class="nav-link"><span>Contact</span></a></li>
+	        </ul>
+	      </div>
+	    </div>
+	  </nav>
+	  <section id="home-section" class="hero">
+		  <div class="home-slider  owl-carousel">
+	       <div class="slider-item ">
+	      	<div class="overlay"></div>
+	         <div class="container">
+	          <div class="row d-md-flex no-gutters slider-text align-items-end justify-content-end" data-scrollax-parent="true">
+	          	<div class="one-third js-fullheight order-md-last img" style="background-image:url(images/KK2_BG.JPG);">
+	          	 <div class="overlay"></div>
+	          	</div>
+		          <div class="one-forth d-flex  align-items-center ftco-animate" data-scrollax=" properties: { translateY: '70%' }">
+		          	<div class="text">
+		          		<span class="subheading">Hello!</span>
+			            <h1 class="mb-4 mt-3">I'm <span>Kiran Kannur</span></h1>
+
+						<!-- Element to contain animated typing -->
+						<span id="typing-animation"></span>
+
+						<script>
+
+						// Initialize the typing animation
+						const typingAnimationElement = document.getElementById('typing-animation');
+
+						// Create an array of typing text
+						const typingTexts = [
+						'Business Intelligence Analyst  ',
+						'Finance Data Analyst ',
+						'Automotive Data Analyst   ',
+						'Big Data Analyst  ',
+						'Data Scientist   ',
+						'Data Engineer   ',
+						'Project Management   ',
+						];
+
+						// Create a function to display the typing animation for a given text
+						function playTypingAnimation(text) {
+						// Loop through each character and add it to the element
+						for (let i = 0; i < text.length; i++) {
+							setTimeout(() => {
+							typingAnimationElement.textContent += text[i];
+							}, i * 100); // Increase the delay to slow down the typing animation
+						}
+
+						// Once the animation is complete, reset the text and start over
+						setTimeout(() => {
+							typingAnimationElement.textContent = '';
+							playTypingAnimation(typingTexts[(typingTexts.indexOf(text) + 1) % typingTexts.length]);
+						}, text.length * 100);
+						}
+
+						// Start the typing animation loop
+						playTypingAnimation(typingTexts[0]);
+
+						</script>
+
+						<br>
+						<br>
+			            <h2>A Senior Data Analyst</h2>
+						<!-- <h2 class="d-flex" style="margin-bottom: 0">With over 5 years of experience</h2> -->
+						<!-- <br> -->
+			            <p><a href="https://www.linkedin.com/in/kirankannur/" class="btn btn-primary py-3 px-4">linkedin</a> 
+							<a href="https://public.tableau.com/app/profile/kiran.kannur/vizzes" class="btn btn-white btn-outline-white py-3 px-4">Tableau</a>
+							<a href="https://github.com/KiranK8" class="btn btn-white btn-outline-white py-3 px-4">GitHub</a></p>
+		            </div>
+		          </div>
+	        	</div>
+	        </div>
+	      </div>
+		</div>
+    </section>
+
+
+
+    <section class="ftco-about img ftco-section ftco-no-pb" id="about-section">
+    	<div class="container">
+			<div class="row">
+				<div class="row d-flex align-items-stretch">
+				<!-- <div class="row d-flex"> -->
+					<div class="col-md-6 col-lg-5 d-flex">
+						<div class="img-about img d-flex align-items-stretch">
+							<div class="overlay">
+								<div class="row">
+									<div class="col-sm-6 col-md-5">
+									  <div class="about-img">
+										<img src="images/KK2_about_me.png" class="img-fluid rounded b-shadow-a" alt="">
+									  </div>
+									</div>
+									<!-- Details next to profile image -->
+									<div class="col-sm-6 col-md-7">
+									  <div class="about-info">
+										<p><span class="title-s">Name: </span> <span>Kiran Kannur</span></p>
+										<p><span class="title-s">Job Role: </span> <span>Senior Data Analyst</span></p>
+										<p><span class="title-s">Experience: </span> <span>6 Years 1 Month</span></p>
+										<p><span class="title-s">Address: </span> <span>Stuttgart, Germany</span></p>
+									  </div>
+									</div>
+								  </div>
+
+								<div class="skill-mf">
+									<p class="title-s">Skills</p>
+									<span>Microsoft Power BI</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>Tableau</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>Splunk</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>Data Visualization</span> <span class="pull-right">95%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 95%" aria-valuenow="95" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>SQL</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%;" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>PYTHON</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Statistical Analysis</span> <span class="pull-right">90%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+
+									<span>Microsoft Excel</span> <span class="pull-right">85%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 85%" aria-valuenow="85" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+									
+									<span>Machine Learning</span> <span class="pull-right">80%</span>
+									<div class="progress">
+										<div class="progress-bar" role="progressbar" style="width: 80%" aria-valuenow="80" aria-valuemin="0"
+											aria-valuemax="100"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+					
+					<div class="col-md-6 col-lg-7 pl-lg-5 pb-5">
+						<div class="row justify-content-start pb-3">
+							<div class="col-md-12 heading-section ftco-animate">
+								
+								<h1 class="big">About</h1>
+								<h2 class="mb-4">About Me</h2>
+								
+								<p>With 6+ years in big data analytics, data science, and AI. I specialize in data analytics, machine learning, predictive analytics, and business intelligence. I hold a Master’s in Data Science & Machine Learning from RPTU, Germany and a Bachelor’s in Electronics & Communication Engineering from SDMCET, India.
+
+									I’ve worked with Mercedes-Benz, Bosch, and Continental, leveraging Power BI, Tableau, Databricks, PySpark, Azure, SQL, and Python to build Data Visualizations, ML models, automate pipelines, and optimize business insights. Passionate about Data-driven solutions, I thrive in fast-paced environments, driving innovation and data driven decision making.</p>
+								<ul class="about-info mt-4 px-md-0 px-2">
+									<li class="d-flex"><span>Profile:</span> <span>Data Science &amp; Analytics</span></li>
+									<li class="d-flex"><span>Domain:</span> <span>Finance &amp; Controlling, Project Management, Automotive, Business Intelligence</span></li>
+									<li class="d-flex"><span>Education:</span> <span>Master of Science (M.Sc)</span></li>
+									<li class="d-flex"><span>Language:</span> <span>English (C1), German (B1)</span></li>
+									<li class="d-flex"><span>BI Tools:</span> <span>Microsoft Power BI, Tableau, Microsoft Excel, Microsoft Power Point</span></li>
+									<li class="d-flex"><span>Other Skills:</span> <span>SQL, Python, Cloud, PySpark, Git, JIRA, Confluence, SAP, Azure, AWS, Databricks, Splunk, ETL/ELT, Data Warehousing, MySQL, PostgreSQL, Machine Learning, Deep Learning, Microsoft Fabrics, Cloud-Technologies</span></li>
+									<li class="d-flex"><span>Interest:</span> <span>Traveling, Cooking, Badminton</span></li>
+									
+								</ul>
+							</div>
+						</div>
+
+
+						<div class="counter-wrap ftco-animate d-flex mt-md-3">
+							<div class="text">
+								<p class="mb-4">
+									<span class="number" data-number="30">0</span> <span>+</span>
+									<span>&nbsp; Projects completed</span>
+								</p>
+								<p><a href="https://www.linkedin.com/in/kirankannur/" class="btn btn-primary py-3 px-3">LinkedIn</a></p>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+    </section>
+
+
+
+	
+    <section class="ftco-section ftco-no-pb" id="resume-section">
+    	<div class="container">
+    		<div class="row justify-content-center pb-5">
+          <div class="col-md-10 heading-section text-center ftco-animate">
+          	<h1 class="big big-2">Resume</h1>
+            <h2 class="mb-4">Resume</h2>
+            <p>Seasoned Senior Data Analyst with 6+ years of experience driving business strategies through data-driven insights. Proven expertise in data analytsics, data science, statistical analysis, machine learning algorithms and project management.</p>
+          </div>
+        </div>
+
+		<div class="row">
+			<h1 class="big-4">Experience</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+		<div class="row">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">09/2024 – 02/2025</span>
+					<h2>Data Analyst – Working Student</h2>
+					<span class="position">Mercedes-Benz AG</span>
+					<p class="mt-4">Area – Central Controlling Mercedes-Benz Cars Operations (Finance) 
+						<ul>
+							<li>Created and managed tables using Power Query in Microsoft Excel.</li>
+							<li>Conducted data analyses on financial data and dashboards for central controlling at Mercedes-Benz Cars Operations.</li>
+							<li>Cleaned, processed, and optimized measures, tables, and visualizations in Microsoft Power BI for the MO (Mercedes-Benz Operations) dashboard.</li>
+							<li>Developed new measures using DAX and enhanced visualizations for improved data representation.</li>
+							<li>Collaborated closely with stakeholders to gather requirements and deliver actionable reports.</li>
+							<li>Ensured data accuracy and integrity through rigorous validation and testing.</li>
+							<li>Translated and recreated dashboards for international teams (German – English).</li>
+							<li>Contributed to team activities and actively participated in brainstorming sessions for new visualization concepts.</li>
+							<li>Proactively developed innovative data-driven strategies for automating data pipelines.</li>
+							<li>Independently carried out all tasks, demonstrating strong initiative and problem-solving skills.</li>
+						</ul>
+					</p>
+					<h5><strong>Skills & Tools:</strong></h5>
+					<p><strong>Microsoft Power BI (DAX)</strong>, <strong>Microsoft Excel</strong>, <strong>Microsoft Power Point</strong>, <strong>Power Query</strong>, <strong>Python</strong>, <strong>SQL</strong>, <strong>Tableau</strong>, <strong>GitLab</strong>, <strong>JIRA</strong>, <strong>Confluence</strong>.</p>
+				</div>
+		</div>
+
+		<br>
+
+
+		<div class="row">
+				<div class="resume-wrap ftco-animate">
+					<span class="date">06/2023-06/2024</span>
+					<h2>Big Data Analyst – Working Student</h2>
+					<span class="position">Robert Bosch GmbH</span>
+					<p class="mt-4">Area – Project Management and SW Development Metrics 
+						<ul>
+							<li>Retrieving and Evaluation of data regarding project status and progress based on big data from available requirement management tools (such as DOORS), test management tools (such as RQM), and other software development and tasks tracking tools (such as track and release, Jira).</li>
+							<li>Automated a pipeline such that a customer can choose different levels in dashboard and can receive the respective backend data from the cloud server in the form of email.</li>
+							<li>Pre-Process, Analyze and created Dashboards for different levels of SW development with the motive of assisting customers to visualize the problem, provide statistics of the existing problem and possible solutions.</li>
+							<li>Created Machine Learning Pipeline (used Random Forest algorithm) for predicting the Lead Time of Work Items from ALM, DOORs, T&R, Jenkins etc.</li>
+							<li>Development of reports and dashboards for internal projects at Bosch for more efficient evaluation of test automation data and project status data, such as specifications, requirements, and software test status.</li>
+							<li>Optimization of existing metrics and graphic representations for more efficient creation.</li>
+							<li>Updating and deploying evaluation tools for the status of Driver Assistance and Active Safety projects to ensure uniform reporting.</li>
+							<li>Design, implementation, and testing of new metrics and graphs for efficient presentation of project status using various software tools, such as Splunk, Microsoft Power BI, Python, Git, and BitBucket.</li>
+							<li>Development of a tool using python for the automatic generation of reports as emails for other stakeholder's uses.</li>
+							<li>Prototyped new methods for compressing data to make long running queries to run more efficient.</li>
+							<li>Documentation of project metrics and graphs for the areas of Driver Assistance and Active Safety.</li>
+						</ul>
+					</p>
+					<h5><strong>Skills & Tools:</strong></h5>
+					<p><strong>Microsoft Power BI (DAX)</strong>, <strong>Python</strong>, <strong>SQL</strong>, <strong>Tableau</strong>, <strong>github</strong>, <strong>JIRA</strong>, <strong>Confluence</strong>, <strong>IBM DOORS</strong>, <strong>V-model</strong>, <strong>Bitbucket</strong>, <strong>Track and Release</strong>, <strong>Splunk Tool (SPL)</strong>.</p>
+				</div>
+
+				
+		</div>
+
+		<br>
+
+		<div class="row">
+			<div class="resume-wrap ftco-animate">
+					<span class="date">05/2022 – 09/2023</span>
+					<h2>Student Research Assistant (HiWi)</h2>
+					<span class="position">Rheinland-Pfälzische Technische Universität Kaiserslautern-Landau</span>
+					<p class="mt-4">Area – Data Science 
+						<ul>
+							<li>Used Gem5 simulator with Python to model ILP saturation of X86 and ARM architectures.</li>
+							<li>Created visualizations and dashboards.</li>
+						</ul>
+					</p>
+					<h5><strong>Skills & Tools:</strong></h5>
+					<p><strong>Microsoft Excel</strong>, <strong>Python</strong>, <strong>Gem5</strong>.</p>
+			</div>
+
+				
+		</div>
+
+		<br>
+
+		<div class="row">
+			<div class="resume-wrap ftco-animate">
+					<span class="date">07/2018 – 08/2021</span>
+					<h2>Data Analyst</h2>
+					<span class="position">Continental Automotive Components Private Ltd.</span>
+					<p class="mt-4">Area – Vehicle Data Analytics 
+						<ul>
+							<li>Databricks notebook creation and maintenance for ECU analytics to enhance data processing workflows.</li>
+							<li>Analyzing historical ECU signal data to predict component failures, enabling proactive maintenance, and reducing vehicle downtime.</li>
+							<li>Worked with time series ECU signal analysis using PySpark and Python to support advanced automotive diagnostics and predictive models.</li>
+							<li>Creation of dashboards using Microsoft Power BI to visualize the use cases of Charging and Battery Management Systems.</li>
+							<li>Outlier detection in vehicle time series signal data from ECU sensors using Deep learning algorithms such as LSTM in Azure ML Studio.</li>
+							<li>Worked with automotive vector tools like CANape, CANoe, and INCA for data acquisition and signal measurement.</li>
+							<li>Actively participated in PI planning and collaborated with the advanced analytics team to drive data- driven decision making and project alignment.</li>
+							<li>Committed to continuous learning, regularly updating skills, and adapting to new technologies in automotive analytics and machine learning.</li>
+							<li>Developed and deployed machine learning models to improve operational efficiency and reduce costs. Built end-to-end pipelines for data ingestion, cleaning, and analysis. Created interactive data visualizations to communicate insights to stakeholders.</li>
+							<li>Created dashboards and performed data analysis using Microsoft Power BI.</li>
+						</ul>
+					</p>
+					<h5><strong>Skills & Tools:</strong></h5>
+					<p><strong>Azure</strong>, <strong>Databricks</strong>, <strong>Microsoft Power BI (DAX)</strong>, <strong>Python</strong>, <strong>SQL</strong>, <strong>PySpark</strong>, <strong>Tableau</strong>, <strong>Machine Learning</strong>, <strong>Deep Learning</strong>, <strong>github</strong>, <strong>JIRA</strong>, <strong>Confluence</strong>,  <strong>TensorFlow</strong>, <strong>Keras</strong>.</p>
+				</div>
+
+				
+		</div>
+			
+
+	<br>
+	<br>
+
+		<div class="row">
+			<h1 class="big-4">Education</h1>
+			<div class="underline"></div>
+		</div>
+		<br>
+		
+			<div class="row">
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">10/2021 – 03/2025</span>
+    					<h2>Master of Science</h2>
+    					<span class="position">Rheinland-Pfälzische Technische Universität Kaiserslautern-Landau</span>
+					</p>
+					<h5><strong>05/2024 – 10/2024</strong></h5>
+					<h5>Master Thesis</h5>
+					<p class="mt-4"><strong>Topic</strong> - Analysis and Improvement of convergence of Physics Informed Neural Networks for large scale systems.	
+						<p class="mt-4"><strong>Grade: 1.0</strong></p>					
+						<p>
+						An advanced neural network architecture, specifically focusing on the integration of LSTM within data science applications for dynamic modelling of chemical processes such as Continuous Stirred-Tank Reactor (CSTR) systems. This approach involved customizing and creating partially connected LSTM architecture by strategically simplifying connections within the network based on the analysis of physical and structural data from the CSTR system, that how different variables in the process are related. The aim is to enhance the model’s ability to accurately forecast process outcomes and reduce computational demands, particularly in large-scale systems.
+						</p>
+					</p>
+    				</div>
+    			</div>
+
+    			<div class="col-md-6">
+    				<div class="resume-wrap ftco-animate">
+    					<span class="date">08/2014 – 06/2018</span>
+    					<h2>Bachelor of Engineering</h2>
+    					<span class="position">Visvesvaraya Technological University</span>
+    					<p class="mt-4">Grade: 1.3</p>
+    				</div>
+				</div>
+    		</div>
+
+    		<!-- <div class="row justify-content-center mt-5">
+    			<div class="col-md-6 text-center ftco-animate">
+    				<p><a href="#" class="btn btn-primary py-4 px-5">Download CV</a></p>
+    			</div>
+    		</div> -->
+    	</div>
+    </section>
+
+   
+
+    <section class="ftco-section" id="project-section">
+      <div class="container">
+        <div class="row justify-content-center mb-5 pb-5">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Projects</h1>
+            <h2 class="mb-4">Projects</h2>
+            <p>Below are the sample Data Analytics projects on SQL, Python, Power BI & ML.</p>
+          </div>
+        </div>
+        <div class="row d-flex">
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://github.com/KiranK8/Nanodegree---Programming-for-Data-Science" class="block-20 zoom-effect" style="background-image: url('images/Project1.jpg');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://github.com/KiranK8/Nanodegree---Programming-for-Data-Science">Bikeshare and Movie Rental Data Analysis using SQL and Python</a></h3>
+                <p>Analyzed movie rental trends using SQL and explored bikeshare data with Python to uncover insights on customer behavior and performance.</p>
+              </div>
+            </div>
+          </div>
+		  <div class="col-md-4 d-flex ftco-animate">
+			<div class="blog-entry">
+			  <a href="https://github.com/KiranK8/Covid_19_data_analysis" class="block-20 zoom-effect" style="background-image: url('images/Project3.jpg');">
+			  </a>
+			  <div class="text mt-3 float-right d-block">
+
+			    <h3 class="heading"><a href="https://github.com/KiranK8/Covid_19_data_analysis">COVID-19 Data Analysis using Python</a></h3>
+			    <p>Developed a dynamic dashboard using Python, REST APIs, and machine learning to analyze COVID-19 trends, predict case doubling rates, and visualize key insights.</p>
+			  </div>
+		    </div>
+		  </div>
+          <div class="col-md-4 d-flex ftco-animate">
+          	<div class="blog-entry justify-content-end">
+              <a href="https://public.tableau.com/app/profile/kiran.kannur/viz/EmergencyRoomsHealthcare/Overview" class="block-20 zoom-effect" style="background-image: url('images/Project2.png');">
+              </a>
+              <div class="text mt-3 float-right d-block">
+
+                <h3 class="heading"><a href="https://public.tableau.com/app/profile/kiran.kannur/viz/EmergencyRoomsHealthcare/Overview">Hospital Emergency Room Dashbaord using Tableau</a></h3>
+                <p>Designed a Tableau Dashbaord for hospital emergency room to track patient admissions, wait times, and diversity trends for optimizing healthcare services.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+	<br>
+
+				<!-- new row 1-->
+
+	<div class="row d-flex">
+		<div class="col-md-4 d-flex ftco-animate">
+			<div class="blog-entry justify-content-end">
+			<a href="https://github.com/KiranK8/Crypto-Currency-Analysis-Power-BI-" class="block-20 zoom-effect" style="background-image: url('images/Project7.png');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+
+			<h3 class="heading"><a href="https://github.com/KiranK8/Crypto-Currency-Analysis-Power-BI-">Cryptocurrency Market Analysis Dashboard using Power BI</a></h3>
+			<p>Desgined Crypto Currency Dashbaord and analyzed cryptocurrency market trends, trading volume, and price fluctuations using Power BI to uncover insights on market capitalization and volatility.  </p>
+			</div>
+		</div>
+		</div>
+		<div class="col-md-4 d-flex ftco-animate">
+		<div class="blog-entry">
+			<a href="https://github.com/KiranK8/HR-Attrition-Analysis-POWER-BI-" class="block-20 zoom-effect" style="background-image: url('images/Project8.png');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+
+			<h3 class="heading"><a href="https://github.com/KiranK8/HR-Attrition-Analysis-POWER-BI-">HR Attrition Dashboard using Power BI</a></h3>
+			<p>Designed HR Attrition Dashboard and analyzed employee attrition trends, salary distribution, job involvement, and travel impact using Power BI to uncover key insights for improving retention strategies. </p>
+			</div>
+		</div>
+		</div>
+		<div class="col-md-4 d-flex ftco-animate">
+			<div class="blog-entry justify-content-end">
+			<a href="https://github.com/KiranK8/Uber-Traffic-Analysis-Power-BI-" class="block-20 zoom-effect" style="background-image: url('images/Project9.png');">
+			</a>
+			<div class="text mt-3 float-right d-block">
+
+			<h3 class="heading"><a href="https://github.com/KiranK8/Uber-Traffic-Analysis-Power-BI-">Uber Traffic Analysis Dashboard using Power BI</a></h3>
+			<p>Desinged Uber Traffic Dahboard and analyzed traffic patterns, travel time variations, and congestion trends using Power BI to optimize travel planning and decision-making. </p>
+			</div>
+		</div>
+		</div>
+	</div>
+	<br>
+	
+			<!-- new row 2-->
+		<div class="row d-flex">
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/KiranK8/Amuzement-Park-Visual-Analytics" class="block-20 zoom-effect" style="background-image: url('images/Project4.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+
+				<h3 class="heading"><a href="https://github.com/KiranK8/Amuzement-Park-Visual-Analytics">Amusement Park Visual Analytics using Bokeh and Python</a></h3>
+				<p>Developed interactive data visualizations for decision trees, clustering, and crime analysis using Bokeh, Pandas, and Python for the VAST Challenge 2015. </p>
+				</div>
+			</div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+			<div class="blog-entry">
+				<a href="https://github.com/KiranK8/Movie-Recommender-System" class="block-20 zoom-effect" style="background-image: url('images/Project5.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+
+				<h3 class="heading"><a href="https://github.com/KiranK8/Movie-Recommender-System">Movie Recommender System using Python</a></h3>
+				<p>Developed a personalized movie recommendation system using collaborative filtering, content-based filtering, and deep learning to enhance user experience and engagement.</p>
+				</div>
+			</div>
+			</div>
+			<div class="col-md-4 d-flex ftco-animate">
+				<div class="blog-entry justify-content-end">
+				<a href="https://github.com/KiranK8/ETL-Pipeline-" class="block-20 zoom-effect" style="background-image: url('images/Project6.jpg');">
+				</a>
+				<div class="text mt-3 float-right d-block">
+
+				<h3 class="heading"><a href="https://github.com/KiranK8/ETL-Pipeline-">Data Engineering Pipeline using Python</a></h3>
+				<p>Built API data extraction, ETL processes, and web scraping pipelines using Python to automate data Extraction, Transformation, and Load (ETL).</p>
+				</div>
+			</div>
+			</div>
+		</div>
+	<br>
+		<!-- added justify-content-center to center align the last two projects -->
+	  </div>
+    </section>
+
+	<section class="ftco-section ftco-no-pt ftco-no-pb ftco-counter img" id="section-counter">
+      <div class="container">
+		<div class="row d-md-flex align-items-center">
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="9">0</strong>
+                <span>Achievements</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="30">0</strong>
+                <span>Projects</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="1000">0</strong>
+                <span>Classes</span>
+              </div>
+            </div>
+          </div>
+          <div class="col-md d-flex justify-content-center counter-wrap ftco-animate">
+            <div class="block-18">
+              <div class="text">
+                <strong class="number" data-number="5000">0</strong>
+                <span>Cups of coffee</span>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+	
+	  <div class="ftco-section ftco-hireme img margin-top" style="background-image: url(images/KK2_BG3.jpg)">
+			<!-- <div class="container"> -->
+				<div class="row justify-content-center">
+					<div class="col-md-7 ftco-animate text-center">
+						<h2>More projects on<span> Github  </span> </h2>
+						<div class="heading"> <h4> I love to solve business problems &amp; uncover hidden data stories </h4>
+						<br>
+						<p><a href="https://github.com/KiranK8" class="btn btn-primary py-3 px-5">GitHub</a></p>
+						</div>
+					</div>
+				</div>
+			<!-- </div> -->
+		</div>
+	</section>
+
+
+
+    <section class="ftco-section contact-section ftco-no-pb" id="contact-section">
+      <div class="container">
+      	<div class="row justify-content-center mb-5 pb-3">
+          <div class="col-md-7 heading-section text-center ftco-animate">
+            <h1 class="big big-2">Contact</h1>
+            <h2 class="mb-4">Contact Me</h2>
+            <p>Below are the details to reach out to me!</p>
+          </div>
+        </div>
+
+        <div class="row d-flex contact-info mb-5">
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-map-signs"></span>
+          		</div>
+          		<h3 class="mb-4">Address</h3>
+	            <p>Stuttgart, Germany</p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-phone2"></span>
+          		</div>
+          		<h3 class="mb-4">Contact Number</h3>
+	            <p><a href="tel://0101010101">+49 15752441662</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-paper-plane"></span>
+          		</div>
+          		<h3 class="mb-4">Email Address</h3>
+	            <p><a href="mailto:info@yoursite.com">kirankannur94@gmail.com</a></p>
+	          </div>
+          </div>
+          <div class="col-md-6 col-lg-3 d-flex ftco-animate">
+          	<div class="align-self-stretch box p-4 text-center">
+          		<div class="icon d-flex align-items-center justify-content-center">
+          			<span class="icon-globe"></span>
+          		</div>
+          		<h3 class="mb-4">Download Resume</h3>
+	            <p><a href="#">resumelink</a></p>
+	          </div>
+          </div>
+   </div>
+ </section>
+
+
+ 
+	
+    <footer class="ftco-footer ftco-section">
+		<div class="container">
+		  <div class="row">
+			<div class="col-md-12 text-center">
+  
+			  <p><!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. -->
+	Copyright &copy;<script>document.write(new Date().getFullYear());</script> All rights reserved | This template is made with <i class="icon-heart color-danger" aria-hidden="true"></i> by <a href="https://colorlib.com" target="_blank">Colorlib</a>
+	<!-- Link back to Colorlib can't be removed. Template is licensed under CC BY 3.0. --></p>
+			</div>
+		  </div>
+		</div>
+	  </footer>
+
+
+  <!-- loader -->
+  <div id="ftco-loader" class="show fullscreen"><svg class="circular" width="48px" height="48px"><circle class="path-bg" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke="#eeeeee"/><circle class="path" cx="24" cy="24" r="22" fill="none" stroke-width="4" stroke-miterlimit="10" stroke="#F96D00"/></svg></div>
+
+
+  <script src="js/jquery.min.js"></script>
+  <script src="js/jquery-migrate-3.0.1.min.js"></script>
+  <script src="js/popper.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/jquery.easing.1.3.js"></script>
+  <script src="js/jquery.waypoints.min.js"></script>
+  <script src="js/jquery.stellar.min.js"></script>
+  <script src="js/owl.carousel.min.js"></script>
+  <script src="js/jquery.magnific-popup.min.js"></script>
+  <script src="js/aos.js"></script>
+  <script src="js/jquery.animateNumber.min.js"></script>
+  <script src="js/scrollax.min.js"></script>
+  
+  <script src="js/main.js"></script>
+    
+  </body>
+</html>
